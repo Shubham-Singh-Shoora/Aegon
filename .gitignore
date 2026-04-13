@@ -10,7 +10,7 @@
 /Faculty*.xlsx
 
 # Frontend local credential fixtures
-/frontend/src/*credentials*.json
+# (Removed ignore to allow production build in Vercel)
 
 # Off-chain generated artifacts (may include voter credential material)
 /off-chain/artifacts/
