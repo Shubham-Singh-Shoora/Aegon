@@ -52,7 +52,14 @@ export function UtilityStrip(props: UtilityStripProps) {
                         <button 
                             key={item.key}
                             className={`navbar-link ${active ? "active-nav" : ""}`} 
-                            onClick={() => !disabled && props.onSetView(item.key)}
+                            onClick={() => {
+                                if (disabled) return;
+                                if (item.key === "DOCS") {
+                                    window.open('/Aegon_documentation.pdf', '_blank');
+                                } else {
+                                    props.onSetView(item.key);
+                                }
+                            }}
                             disabled={disabled}
                             style={{ 
                                 color: active ? "#F76F32" : (disabled ? "rgba(255,255,255,0.3)" : "rgba(255,255,255,0.7)"),

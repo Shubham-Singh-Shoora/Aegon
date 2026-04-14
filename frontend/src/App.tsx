@@ -917,7 +917,7 @@ function App() {
                                 passedCount={passedCount}
                                 onConnectWallet={connectWallet}
                                 onGoVerify={() => setView("VERIFY")}
-                                onGoDocs={() => setView("DOCS")}
+                                onGoDocs={() => window.open('/Aegon_documentation.pdf', '_blank')}
                                 onGoResources={() => setView("RESOURCES")}
                                 onGoExplorer={() => setView("EXPLORER")}
                                 onGoNotifications={() => setView("NOTIFICATIONS")}
